@@ -7,8 +7,10 @@ const Stack = createStackNavigator()
 
 const MainStackNavigator = () =>{
     return (
-        <Stack.Navigator>
-            <Stack.Screen name="TomatoScreen" component={TomatoScreen}/>
+        <Stack.Navigator screenOptions={{
+            headerShown:false
+        }} >
+            <Stack.Screen options={{headerShown:true,title:"Ge"}} name="TomatoScreen" component={TomatoScreen}/>
             <Stack.Screen name="GoldScreen" component={GoldScreen} />
             <Stack.Screen name="PurpleScreen" component={PurpleScreen} />
         </Stack.Navigator>
